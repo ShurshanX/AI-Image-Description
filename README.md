@@ -1,1 +1,1 @@
-# AI-Image-Description-
+# AI-Image-Description
