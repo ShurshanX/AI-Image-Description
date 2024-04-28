@@ -45,7 +45,7 @@ Directory Structure
 root      // next.js project
 ├─ public   
 ├─ src
-	├─ app  //main page
+    ├─ app  //main page
     ├─ components     // next.js components
     ├─ dictionaries   // Add new language using the JSON file
     ├─ lib            // ernie and gemini api service 
