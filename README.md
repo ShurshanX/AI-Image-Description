@@ -13,8 +13,8 @@ AI Image Description Generator
 Screenshots & Demo
 ----------------
 
-![AI Image Description Generator Screenshot 1](./public/assets/screenshot-1.png "Screenshot 1")
-![AI Image Description Generator Screenshot 2](./public/assets/screenshot-2.png "Screenshot 2")
+![AI Image Description Generator Screenshot 1](./public/assets/screenshot-2.png "Screenshot 1")
+![AI Image Description Generator Screenshot 2](./public/assets/screenshot-1.png "Screenshot 2")
 
 DEMO: [www.imagedescriptiongenerator.xyz](https://imagedescriptiongenerator.xyz/)
 
