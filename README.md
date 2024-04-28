@@ -54,4 +54,8 @@ root      // next.js project
 Others
 ----------------
 
-***⭐ If you like this project, please add a star ⭐***
+you can contact me at Twitter: [https://twitter.com/imgdesgen](https://twitter.com/imgdesgen)
+
+if this project is helpful to you, buy be a coffee.
+
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'Q5Q1WDG36');kofiwidget2.draw();</script> 
