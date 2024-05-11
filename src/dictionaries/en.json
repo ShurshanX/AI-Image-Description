@@ -9,25 +9,49 @@
     "func_submit_label": "Generate Description",
     "example_title": "Example Use Cases",
     "example_link_label": "Explore All Examples",
-    "fqa_title": "Frequently Asked",
-    "fqa_ask_1": "How to use the image description generator tool?",
-    "fqa_answer_1": "Click the “Upload Image” button, select the picture you want to interpret, and wait for a moment. The AI will then present the interpretation results right in front of you!",
-    "fqa_ask_2": "How is the image description generator tool implemented?",
-    "fqa_answer_2": "The image description generator tool is implemented using large-scale language models. It recognizes elements and their relationships in images, analyzing color, shape, and texture to reveal hidden meanings.",
-    "fqa_ask_3": "How to Share Image and description?",
-    "fqa_answer_3": "Sharing images and description is easy! Click “Download Image” to get a new picture with the description. Or, use your system's screenshot tool to capture it. Then share on your favorite social media to let others enjoy your work and its meaning.",
-    "fqa_ask_4": "How to Protect Privacy?",
-    "fqa_answer_4": "This is an anonymous free ai image description generator tool. that does not record any personal information without your consent. With your permission, the website may share your image interpretations and content in its case library.",
+    "fqa_title": "Frequently asked questions",
+    "fqa_ask_1": "xxxx?",
+    "fqa_answer_1": "xxx!",
+    "fqa_ask_2": "xxx?",
+    "fqa_answer_2": "xxx",
+    "fqa_ask_3": "xxx?",
+    "fqa_answer_3": "xxx",
+    "fqa_ask_4": "xxx?",
+    "fqa_answer_4": "xxx",
     "fqa_note_label": "Can’t find the answer you’re looking for? Reach out to our ",
     "fqa_link_label": "customer support team",
     "donation_label": "Buy Me a Coffee",
-    "donation_about": "If you enjoy my tool, please consider making a small donation to help me maintain the website.  I truly appreciate any amount of support – think of it as buying me a virtual coffee!"
+    "donation_about": "xxxx",
+    "public_label": "I agree to publicly display this content on ImageAI.QA.",
+    "credits_label": "It will cost credits: 1"
+  },
+  "about": {
+    "about_title": "About us",
+    "about_description": "xxxxx",
+    "contact_title": "Contact Me",
+    "contact_description": "xxxx"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "xxx",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email address",
+    "message": "Your Message",
+    "submit": "Let's Talk"
   },
   "navbar": {
-    "logo_alt": "ImageAI.QA logo",
-    "logo_title": " AI Image Description Generator: Free online describe image, Text Extraction & Code Conversion",
+    "logo_alt": "xxx",
+    "logo_title": "xxxx",
     "home": "Home",
-    "language": "Languages"
+    "blog": "Blog",
+    "about": "About",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "explore": "Explore",
+    "language": "Languages",
+    "theme_label": "Theme",
+    "locale_label": "Local"
   },
   "footer": {
     "copyright": "Copyright © 2019 ImageAI.QA",
@@ -37,5 +61,14 @@
     "contact": "Contact Us",
     "coffee_buy_title": "Enjoy ImageAI.QA?",
     "coffee_buy": "Buy Me a Coffee"
+  },
+  "blog": {
+    "title": "The latest “images descriptions generated” news",
+    "more_button_lable": "Read More",
+    "back_button_lable": "Back to Blog",
+    "author_lable": "Posted by"
+  },
+  "policy": {
+    "back_button_lable": "Back to Home"
   }
 }

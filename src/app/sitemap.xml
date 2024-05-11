@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://imagedescriptiongenerator.xyz/en</loc>
+  <lastmod>2024-04-17T15:27:01+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://imagedescriptiongenerator.xyz/en/explore</loc>
+  <lastmod>2024-04-17T15:27:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://imagedescriptiongenerator.xyz/en/blog</loc>
+  <lastmod>2024-04-17T15:27:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://imagedescriptiongenerator.xyz/en/about</loc>
+  <lastmod>2024-04-17T15:27:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://imagedescriptiongenerator.xyz/en/contact</loc>
+  <lastmod>2024-04-17T15:27:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://imagedescriptiongenerator.xyz/en/blog/article/prose-v1</loc>
+  <lastmod>2024-04-17T15:27:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://imagedescriptiongenerator.xyz/en/blog/article/prose-v2</loc>
+  <lastmod>2024-04-17T15:27:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://imagedescriptiongenerator.xyz/en/blog/article/prose-v3</loc>
+  <lastmod>2024-04-17T15:27:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://imagedescriptiongenerator.xyz/en/blog/article/prose-v4</loc>
+  <lastmod>2024-04-17T15:27:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

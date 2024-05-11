@@ -1,7 +1,7 @@
 import { useFormStatus } from "react-dom";
 
 
-function LoadingFull() {
+export function LoadingFull() {
     const { pending } = useFormStatus();
     return (
         <div className={`${pending ? 'show' : 'hidden'} fixed top-0 left-0 w-full h-full z-50 flex justify-center items-center bg-black bg-opacity-50`}>
@@ -14,11 +14,11 @@ export function LoadingOverlay() {
     const { pending } = useFormStatus();
     return (
         <div className={`${pending ? 'show' : 'hidden'} w-full`}>
-            <div className="absolute bg-white bg-opacity-60 z-10 h-full w-full flex items-center justify-center">
+            <div className="absolute bg-gray-900 bg-opacity-50 z-10 h-full w-full flex items-center justify-center">
                 <div className="flex items-center">
                     {/* <span className="text-3xl mr-4">Loading</span> 
                     <span className="text-3xl mr-4">Loading</span>*/}
-                    <svg className="animate-spin h-8 w-8 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    <svg className="animate-spin h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                         <path className="opacity-75" fill="currentColor"

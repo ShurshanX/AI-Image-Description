@@ -1,5 +1,4 @@
-"use server"
-export async function LoadingFull() {
+export function LoadingFull() {
     return (
         <div className="fixed top-0 left-0 w-full h-full z-50 flex justify-center items-center bg-black bg-opacity-50">
             <div className="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-blue-600"></div>
@@ -7,7 +6,7 @@ export async function LoadingFull() {
     );
 };
 
-export async function LoadingOverlay() {
+export function LoadingOverlay() {
     return (
         <div className="w-full">
             <div className="absolute bg-white bg-opacity-60 z-10 h-full w-full flex items-center justify-center">

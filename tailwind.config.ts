@@ -16,6 +16,6 @@ const config: Config = {
     },
   },
   plugins: [require('@tailwindcss/typography')],
-  darkMode: 'class',
+  darkMode: 'selector',
 };
 export default config;

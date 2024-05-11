@@ -2,7 +2,13 @@ import 'server-only'
 import type { Locale } from '@/i18n-config'
 
 const dictionaries = {
-  en: () => import('@/dictionaries/en.json').then((module) => module.default)
+  en: () => import('@/dictionaries/en.json').then((module) => module.default),
+  zh: () => import('@/dictionaries/en.json').then((module) => module.default),
+  de: () => import('@/dictionaries/en.json').then((module) => module.default),
+  fr: () => import('@/dictionaries/en.json').then((module) => module.default),
+  ja: () => import('@/dictionaries/en.json').then((module) => module.default),
+  ko: () => import('@/dictionaries/en.json').then((module) => module.default),
+  es: () => import('@/dictionaries/en.json').then((module) => module.default),
 }
  
 
@@ -34,12 +40,36 @@ export type Dictionary = {
     fqa_link_label: string;
     donation_label: string;
     donation_about: string;
+    public_label: string;
+    credits_label: string;
+  };
+  about:{
+    about_title: string;
+    about_description: string;
+    contact_title: string;
+    contact_description: string;
+  };
+  contact : {
+    title: string;
+    subtitle: string;
+    first_name: string;
+    last_name: string;
+    email: string;
+    message: string;
+    submit: string;
   };
   navbar:{
     logo_alt: string;
     logo_title: string;
     home: string;
+    blog: string;
+    about: string;
+    contact: string;
+    explore: string;
     language: string;
+    pricing: string;
+    theme_label: string; 
+    locale_label: string;
   };
   footer:{
     copyright:string;
@@ -49,5 +79,14 @@ export type Dictionary = {
     contact:string;
     coffee_buy_title:string;
     coffee_buy:string;
-  }
+  };
+  blog: {
+    title: string;
+    more_button_lable: string;
+    back_button_lable: string;
+    author_lable: string
+  };
+  policy: {
+    back_button_lable: string
+  };
 }

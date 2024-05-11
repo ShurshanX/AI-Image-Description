@@ -13,7 +13,7 @@ const TOKEN_HEADERS = {
 const IMAGE2TXT_HEADERS = {
     'Content-Type': 'application/json'
 }
-const PROMPT = "解读图像中的创作背景、情感以及作品背后的故事与寓意，将图片中的信息转化为简洁、有见地的文字描述。"
+const PROMPT = "解读图像中的创作背景、情感以及作品背后的故事与寓意，将图片中的信息转化为简洁、有见地的文字描述。英文返回"
 const BASE_IMAGE2TXT_URL = 'https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/image2text/fuyu_8b?access_token='
 let LAST_TIME = 0;
 let ACCESS_TOKEN = ''

@@ -64,12 +64,12 @@ export default function ImagePicker({ onImageSelected }: ImagePickerProps) {
                   </svg>
                   <div className="mt-4 flex text-sm leading-6 text-gray-600">
                     <label htmlFor="file"
-                      className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
+                      className="relative cursor-pointer rounded-md bg-white dark:bg-gray-900 font-semibold text-indigo-600 dark:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 dark:focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500 dark:hover:text-indigo-400">
                       <span>Click to Upload</span>
                     </label>
-                    <p className="pl-1">or drag and drop</p>
+                    <p className="pl-1 dark:text-gray-400">or drag and drop</p>
                   </div>
-                  <p className="text-xs leading-5 text-gray-600">PNG, JPG up to 2MB</p>
+                  <p className="text-xs leading-5 text-gray-600 dark:text-gray-400">PNG, JPG up to 2MB</p>
                 </div>
         </>
     );

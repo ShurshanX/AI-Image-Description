@@ -6,7 +6,8 @@ import { clerkMiddleware,createRouteMatcher } from "@clerk/nextjs/server";
 
 
 const isProtectedRoute  = createRouteMatcher([
-  '/api/home(.*)'
+  '/api/home(.*)',
+  '/api/user(.*)'
 ]);
 
 // @ts-ignore locales are readonly
@@ -17,7 +18,7 @@ export default clerkMiddleware((auth, request, event) => {
  
 
   if (isProtectedRoute (request)){
-      return NextResponse.next();
+        return NextResponse.next();
   }
 
   const pathname = request.nextUrl.pathname
@@ -28,18 +29,11 @@ export default clerkMiddleware((auth, request, event) => {
   )
 
   if (pathnameHasLocale) return NextResponse.next();
-
-
   const locale = getLocale(request)
-
-  if (pathname.startsWith('/index.html')) {
-    request.nextUrl.pathname = `/${locale}`
-  }else {
-    request.nextUrl.pathname = `/${locale}${pathname}`
-  }
+  request.nextUrl.pathname = `/${locale}${pathname}`
   return NextResponse.redirect(request.nextUrl);
   
- }, {debug: true});
+ }, {debug: false});
 
 
 function getLocale(request: NextRequest): string | undefined {
