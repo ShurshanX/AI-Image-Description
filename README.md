@@ -8,12 +8,18 @@ AI Image Description Generator
 * It is based on **ERNIE 3.5** OR **GEMINI-PRO-1.5** API;
 * It supports multi languages;
 * Integrating the **clerk.com** User Management Platform;
+* Real-time Data Processing: Supports streaming data transmission and utilizes the Shit-And algorithm to parse JSON data.
+* Responsive Design: Adapts to desktops, tablets, mobile phones, and other devices.
+* S3 storage support: Manage your data with S3 storage.
+* Infinite Scrolling Card List SEO-Friendly: Provides an infinite scrolling card list designed for SEO.
+* It supports dark mode theme;
 * It use Next.js to build full-stack web applications.;
 
 Screenshots & Demo
 ----------------
 
 ![AI Image Description Generator Screenshot 1](./public/assets/screenshot-2.png "Screenshot 1")
+![AI Image Description Generator Screenshot 3](./public/assets/screenshot-3.png "Screenshot 3")
 ![AI Image Description Generator Screenshot 2](./public/assets/screenshot-1.png "Screenshot 2")
 
 DEMO: [www.imagedescriptiongenerator.xyz](https://imagedescriptiongenerator.xyz/)

@@ -8,12 +8,18 @@ AI Image Description Generator
 * 它是基于 **ERNIE 3.5** 或 **GEMINI-PRO-1.5** API;
 * 支持7种语言;
 * 集成**clerk.com**用户管理平台;
+* 实时数据处理: 流式数据传输支持，利用 Shit-And 算法解析 JSON 数据;
+* 响应式设计: 适配桌面、平板、手机等设备;
+* 支持 S3 存储，管理您的数据;
+* 无限滚动卡片列表**SEO**友好;
+* 支持黑暗模式主题;
 * 它是基于Next.js构建的全栈 web 应用解决方案;
 
 截图与演示
 ----------------
 
 ![AI Image Description Generator Screenshot 1](./public/assets/screenshot-2.png "Screenshot 1")
+![AI Image Description Generator Screenshot 3](./public/assets/screenshot-3.png "Screenshot 3")
 ![AI Image Description Generator Screenshot 2](./public/assets/screenshot-1.png "Screenshot 2")
 
 DEMO: [www.imagedescriptiongenerator.xyz](https://imagedescriptiongenerator.xyz/)
