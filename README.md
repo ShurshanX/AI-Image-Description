@@ -19,9 +19,11 @@ Screenshots & Demo
 ----------------
 
 <div align=center>
+
 ![AI Image Description Generator Screenshot 1](./public/assets/screenshot-2.png "Screenshot 1")
 ![AI Image Description Generator Screenshot 3](./public/assets/screenshot-3.png "Screenshot 3")
 ![AI Image Description Generator Screenshot 2](./public/assets/screenshot-1.png "Screenshot 2")
+
 </div>
 
 DEMO: [www.imagedescriptiongenerator.xyz](https://imagedescriptiongenerator.xyz/)
