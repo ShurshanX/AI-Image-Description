@@ -8,13 +8,11 @@ import { Dictionary } from '@/dictionaries'
 import { Locale } from "@/i18n-config";
 import ReactMarkdown from 'react-markdown';
 import { ImageDescriptionResponse } from "@/lib/types/responses";
-import ShiftAndJSONParser from "@/scripts/ShiftAndJSONParser";
 import ShiftAndByteBufferMatcher from "@/scripts/ShiftAndByteBufferMatcher";
 import Dialogs, { DialogRef } from "@/components/dialogs";
 import NavContext from "@/components/nav-context";
 import { useAuth } from "@clerk/nextjs";
 import { RemoteMdxPage } from "@/components/mdx-page-remote";
-import { findUserCreditsByClerkId } from "@/actions/user";
 import { defaultComponents } from '@/components/mdx-page-client';
 
 
@@ -61,10 +59,7 @@ export default function UploadForm({ lang, dictionary }: { lang: Locale, diction
             }
         }
         if (userId) {
-            // fetch("/api/user", { method: 'POST' })
-            //     .then((res) => res?.json())
-            //     .then((data) => setValue(data));
-            const credits = await findUserCreditsByClerkId();
+            const credits = "0";
             setValue(credits);
         }
 

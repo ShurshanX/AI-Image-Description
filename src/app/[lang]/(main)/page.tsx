@@ -5,8 +5,7 @@ import UploadForm from "@/app/\/[lang]/(main)/upload-form";
 import { getDictionary, Dictionary } from '@/dictionaries'
 import { Locale } from "@/i18n-config";
 import { useUser } from "@clerk/nextjs";
-import { queryImageInfoList } from '@/actions/explore';
-
+import { IImage } from '@/actions/explore';
 
 export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
 
@@ -14,7 +13,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
 
   const user = await useUser;
 
-  const imagesList = await queryImageInfoList(undefined,1,6);
+  const imagesList:IImage[] = [];
 
   const fqas = [
     {
