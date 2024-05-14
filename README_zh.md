@@ -18,7 +18,7 @@ AI Image Description Generator
 截图与演示
 ----------------
 
-<div align="center">
+<div align=center>
 ![AI Image Description Generator Screenshot 1](./public/assets/screenshot-2.png "Screenshot 1")
 ![AI Image Description Generator Screenshot 3](./public/assets/screenshot-3.png "Screenshot 3")
 ![AI Image Description Generator Screenshot 2](./public/assets/screenshot-1.png "Screenshot 2")
