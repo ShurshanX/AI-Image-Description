@@ -7,7 +7,7 @@ import { LoadingOverlay } from "@/components/loading-from";
 import { Dictionary } from '@/dictionaries'
 import { Locale } from "@/i18n-config";
 import ReactMarkdown from 'react-markdown';
-import { ImageDescriptionResponse } from "@/lib/types/responses";
+import { ImageDescriptionResponse } from "@/types/responses";
 import ShiftAndByteBufferMatcher from "@/scripts/ShiftAndByteBufferMatcher";
 import Dialogs, { DialogRef } from "@/components/dialogs";
 import NavContext from "@/components/nav-context";
@@ -83,9 +83,10 @@ export default function UploadForm({ lang, dictionary }: { lang: Locale, diction
 
                 <p className="mb-5 text-lg font-normal text-gray-500 lg:text-1xl sm:px-16 xl:px-28 dark:text-gray-400">{dictionary.subtitle}</p>
 
-                <div className="items-center justify-between py-2 px-4 mb-4 rounded-lg text-blue-700 bg-blue-100 dark:bg-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800">
+                {userId && <div className="items-center justify-between py-2 px-4 mb-4 rounded-lg text-blue-700 bg-blue-100 dark:bg-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800">
                     <p className="text-sm font-semibold text-blue-700  dark:text-white dark:decoration-white decoration-blue-500">{dictionary.credits_label}</p>
-                </div>
+                    </div>
+                }
                 <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:px-16 xl:px-28">
               
                     <div className="col-span-full">

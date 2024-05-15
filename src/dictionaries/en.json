@@ -70,5 +70,58 @@
   },
   "policy": {
     "back_button_lable": "Back to Home"
+  },
+  "pricing": {
+    "title": "AI Image Description Generator Pricing",
+    "subtitle": "Choose a plan to buy credits, Unleash your creativity with AI Image Description Generator.",
+    "pricing_description": "Image description generation utilizes a credit-based system, with each image requiring 1 credit.",
+    "ko_fi_tips1": "☕ ko-fi Tip: Don't forget your ImageAI.QA username in the ko-fi payment message! 😉 ( Forgot? ",
+    "ko_fi_tips2": "contact us",
+    "prices": [
+      {
+        "type": "0",
+        "variantId": "6f78fe41-xxx-46c6-8770-xxx",
+        "name": "Free",
+        "price": 0,
+        "duration": "",
+        "buy_lable": "Get Started",
+        "description": [
+          "Includes 10 credits for image descriptions",
+          "Maximum upload size of 2MB per image",
+          "Normal Generation Speed",
+          "Powered by the basic model"
+        ]
+      },
+      {
+        "type": "1",
+        "variantId": "097a7cfc-e9da-xxx-b065-xxx",
+        "name": "Single payment",
+        "price": 9.9,
+        "duration": "",
+        "buy_lable": "Buy plan",
+        "description": [
+          "Includes 100 credits for Image Descriptions",
+          "Maximum upload size of 5MB per image",
+          "1 Month Validity",
+          "Fast Generation Speed",
+          "Powered by advanced models"
+        ]
+      },
+      {
+        "type": "2",
+        "variantId": "52080244-22f7-xxx-84b2-xxx",
+        "name": "Pro plan",
+        "price": 9.9,
+        "duration": "per user / month",
+        "buy_lable": "Buy plan",
+        "description": [
+          "Includes 100 credits for Image Descriptions",
+          "Maximum upload size of 5MB per image",
+          "1 Month Validity",
+          "Fast Generation Speed",
+          "Powered by advanced models"
+        ]
+      }
+    ]
   }
 }

@@ -1,5 +1,5 @@
 import 'server-only'
-import { Response } from "./types/responses";
+import { Response } from "../types/responses";
 const AK = process.env.BAIDU_TRANSLATE_API_KEY;
 const SK = process.env.BAIDU_TRANSLATE_SECRET_KEY;
 

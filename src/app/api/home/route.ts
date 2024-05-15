@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { runChatFromGeminiStreamResult } from "@/lib/gemini";
 import { GenerateContentStreamResult, EnhancedGenerateContentResponse, HarmProbability } from "@google/generative-ai";
 import { auth } from '@clerk/nextjs/server';
-import { ImageDescriptionResponse } from "@/lib/types/responses";
+import { ImageDescriptionResponse } from "@/types/responses";
 import { putObject } from '@/lib/s3'
 
 export const dynamic = 'force-dynamic'

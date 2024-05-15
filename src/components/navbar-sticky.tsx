@@ -35,7 +35,8 @@ export default function NavbarSticky({ lang, dictionary }: Props) {
         { name: `${dictionary.navbar.home}`, href: `/${lang}` },
         { name: `${dictionary.navbar.explore}`, href: { pathname: `/${lang}/explore`,query: { page: 1} }},
         { name: `${dictionary.navbar.blog}`, href: `/${lang}/blog` },
-        { name: `${dictionary.navbar.about}`, href: `/${lang}/about` }
+        { name: `${dictionary.navbar.about}`, href: `/${lang}/about` },
+        { name: `${dictionary.navbar.pricing}`, href: `/${lang}/lemon` }
     ]
 
     function handleThemeChange(themeName: Theme) {

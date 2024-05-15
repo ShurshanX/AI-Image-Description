@@ -89,4 +89,20 @@ export type Dictionary = {
   policy: {
     back_button_lable: string
   };
+  pricing: {
+    title: string;
+    subtitle: string;
+    pricing_description: string;
+    ko_fi_tips1: string;
+    ko_fi_tips2: string;
+    prices: {
+      type: string;
+      variantId: string;
+      name: string;
+      price: number;
+      duration: string;
+      buy_lable: string;
+      description: string[];
+    }[];
+  };
 }

@@ -1,7 +1,7 @@
 import 'server-only'
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold, GenerateContentStreamResult} from "@google/generative-ai";
 import GoogleGenerativeAIError from "@google/generative-ai";
-import { Response } from "./types/responses";
+import { Response } from "../types/responses";
 const MODEL_NAME = "gemini-1.5-pro-latest";
 const API_KEY = process.env.GOOGLE_GEMINI_API_KEY as string;
 
