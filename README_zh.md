@@ -7,6 +7,7 @@ AI Image Description Generator
 
 * 它是基于 **ERNIE 3.5** 或 **GEMINI-PRO-1.5** API;
 * 支持7种语言;
+* 支持Lemon Squeezy支付平台;
 * 集成**clerk.com**用户管理平台;
 * 实时数据处理: 流式数据传输支持，利用 Shit-And 算法解析 JSON 数据;
 * 响应式设计: 适配桌面、平板、手机等设备;

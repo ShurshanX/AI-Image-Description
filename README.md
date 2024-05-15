@@ -7,6 +7,7 @@ AI Image Description Generator
 
 * It is based on **ERNIE 3.5** OR **GEMINI-PRO-1.5** API;
 * It supports multi languages;
+* It Supports Lemon Squeezy platform;
 * Integrating the **clerk.com** User Management Platform;
 * Real-time Data Processing: Supports streaming data transmission and utilizes the Shit-And algorithm to parse JSON data.
 * Responsive Design: Adapts to desktops, tablets, mobile phones, and other devices.
