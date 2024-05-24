@@ -3,11 +3,11 @@ AI Image Description Generator
 
 **[English](./README.md)** | **[中文](./README_zh.md)**
 
-**AI说图解图** 精准提取图片中的主要元素，解读图片创作目的；可用于科研、艺术创作中图文互搜领域.  
+**AI说图解图** 精准提取图片中的主要元素，解读图片创作目的；可用于科研、图表分析、艺术创作中图文互搜领域.  
 
 * 它是基于 **ERNIE 3.5** 或 **GEMINI-1.5-PRO** API;
 * 支持7种语言;
-* 支持**Lemon Squeezy**支付平台;
+* 支持**Lemon Squeezy**支付平台 或 **Paddle Billing**支付平台;
 * 集成**clerk.com**用户管理平台;
 * 实时数据处理: 流式数据传输支持，利用 Shit-And 模式匹配算法解析 JSON 数据;
 * 响应式设计: 适配桌面、平板、手机等设备;

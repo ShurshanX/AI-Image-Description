@@ -3,11 +3,11 @@ AI Image Description Generator
 
 **[English](./README.md)** | **[中文](./README_zh.md)**
 
-**AI Image Description Generator** accurately extracts the key elements from images and interprets the creative purposes behind them, which can be applied in fields such as scientific research, artistic creation, and the mutual search between images and texts.  
+**AI Image Description Generator** accurately extracts the key elements from images and interprets the creative purposes behind them, which can be applied in fields such as scientific research, artistic creation, data chart Analysis, and the mutual search between images and texts.  
 
 * It is based on **ERNIE 3.5** OR **GEMINI-1.5-PRO** API;
 * It supports multi languages;
-* It Supports **Lemon Squeezy** platform;
+* It Supports **Lemon Squeezy** platform OR **Paddle Billing**;
 * Integrating the **clerk.com** User Management Platform;
 * Real-time Data Processing: Supports streaming data transmission and utilizes the Shit-And algorithm to parse JSON data.
 * Responsive Design: Adapts to desktops, tablets, mobile phones, and other devices.
