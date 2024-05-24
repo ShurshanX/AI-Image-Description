@@ -5,13 +5,13 @@ AI Image Description Generator
 
 **AI说图解图** 精准提取图片中的主要元素，解读图片创作目的；可用于科研、艺术创作中图文互搜领域.  
 
-* 它是基于 **ERNIE 3.5** 或 **GEMINI-PRO-1.5** API;
+* 它是基于 **ERNIE 3.5** 或 **GEMINI-1.5-PRO** API;
 * 支持7种语言;
-* 支持Lemon Squeezy支付平台;
+* 支持**Lemon Squeezy**支付平台;
 * 集成**clerk.com**用户管理平台;
-* 实时数据处理: 流式数据传输支持，利用 Shit-And 算法解析 JSON 数据;
+* 实时数据处理: 流式数据传输支持，利用 Shit-And 模式匹配算法解析 JSON 数据;
 * 响应式设计: 适配桌面、平板、手机等设备;
-* 支持 S3 存储，管理您的数据;
+* 支持 **S3[aws-sdk]** 存储，管理您的数据;
 * 无限滚动卡片列表**SEO**友好;
 * 支持黑暗模式主题;
 * 它是基于Next.js构建的全栈 web 应用解决方案;
@@ -69,5 +69,5 @@ root      // next.js 项目
 
 如果这个项目对你有帮组，请给我买杯咖啡吧!
 
-<a href='https://ko-fi.com/Q5Q1WDG36' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q1WDG36)
 

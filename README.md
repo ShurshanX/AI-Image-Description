@@ -5,13 +5,13 @@ AI Image Description Generator
 
 **AI Image Description Generator** accurately extracts the key elements from images and interprets the creative purposes behind them, which can be applied in fields such as scientific research, artistic creation, and the mutual search between images and texts.  
 
-* It is based on **ERNIE 3.5** OR **GEMINI-PRO-1.5** API;
+* It is based on **ERNIE 3.5** OR **GEMINI-1.5-PRO** API;
 * It supports multi languages;
-* It Supports Lemon Squeezy platform;
+* It Supports **Lemon Squeezy** platform;
 * Integrating the **clerk.com** User Management Platform;
 * Real-time Data Processing: Supports streaming data transmission and utilizes the Shit-And algorithm to parse JSON data.
 * Responsive Design: Adapts to desktops, tablets, mobile phones, and other devices.
-* S3 storage support: Manage your data with S3 storage.
+* S3 storage support: Manage your data with **S3[aws-sdk]** storage.
 * Infinite Scrolling Card List SEO-Friendly: Provides an infinite scrolling card list designed for SEO.
 * It supports dark mode theme;
 * It use Next.js to build full-stack web applications.;
@@ -69,4 +69,4 @@ you can contact me at Twitter: [https://twitter.com/imgdesgen](https://twitter.
 
 if this project is helpful to you, buy be a coffee.
 
-<a href='https://ko-fi.com/Q5Q1WDG36' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q1WDG36)

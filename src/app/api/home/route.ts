@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { runChatFromGeminiStreamResult } from "@/lib/gemini";
+import { runChatFromGeminiStreamResult } from "@/lib/gemini-client";
 import { GenerateContentStreamResult, EnhancedGenerateContentResponse, HarmProbability } from "@google/generative-ai";
 import { auth } from '@clerk/nextjs/server';
 import { ImageDescriptionResponse } from "@/types/responses";
-import { putObject } from '@/lib/s3'
+import { putObject } from '@/lib/aws-client-s3'
 
 export const dynamic = 'force-dynamic'
 export const runtime = 'edge' //nodejs edge 

@@ -1,5 +1,5 @@
 const withMDX = require('@next/mdx')()
- 
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Configure `pageExtensions` to include MDX files
@@ -9,12 +9,28 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'r2.imagedescriptiongenerator.xyz',
+        hostname: 'www.baidu.com',
         port: '',
         pathname: '/**',
       },
     ],
+  },
+  webpack: (config) => {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      path: false,
+      stream: false,
+      crypto: false,
+      net: false,
+      dns: false,
+      string_decoder: false,
+      tls: false,
+      'pg-native': false,
+      pg: false
+    };
+    return config;
   }
 }
- 
+
 module.exports = withMDX(nextConfig)
