@@ -36,7 +36,8 @@ export default function NavbarSticky({ lang, dictionary }: Props) {
         { name: `${dictionary.navbar.explore}`, href: { pathname: `/${lang}/explore`,query: { page: 1} }},
         { name: `${dictionary.navbar.blog}`, href: `/${lang}/blog` },
         { name: `${dictionary.navbar.about}`, href: `/${lang}/about` },
-        { name: `${dictionary.navbar.pricing}`, href: `/${lang}/lemon` }
+        { name: `${dictionary.navbar.pricing}`, href: `/${lang}/paddle` },
+        // { name: `${dictionary.navbar.pricing}`, href: `/${lang}/lemon` },
     ]
 
     function handleThemeChange(themeName: Theme) {
@@ -64,8 +65,8 @@ export default function NavbarSticky({ lang, dictionary }: Props) {
                     {/* <img src="/assets/logo.svg" className="h-8 dark:text-white" alt={dictionary.navbar.logo_alt} title={dictionary.navbar.logo_title} /> */}
                     <svg aria-label={dictionary.navbar.logo_alt} className="h-8 dark:text-white" viewBox="0 0 70 69.73783005643229"><g transform="translate(0, -0.0000010417790299763285) scale(8.739075905091669)" fill="currentColor"><path xmlns="http://www.w3.org/2000/svg" d="M4 0c-.69 0-1.34.19-1.91.5l3.22 2.34.75-2.25c-.6-.36-1.31-.59-2.06-.59zm-2.75 1.13c-.76.73-1.25 1.74-1.25 2.88 0 .25.02.48.06.72l3.09-2.22-1.91-1.38zm5.63.13l-1.22 3.75h2.19c.08-.32.16-.65.16-1 0-1.07-.44-2.03-1.13-2.75zm-4.72 3.22l-1.75 1.25c.55 1.13 1.6 1.99 2.88 2.22l-1.13-3.47zm1.56 1.53l.63 1.97c1.33-.12 2.46-.88 3.09-1.97h-3.72z"></path></g></svg>
                     <div className='space-x-1'>
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white hidden md:inline-block" title={dictionary.navbar.logo_title}>ImageAI.QA </span>
-                        <p className='self-center font-semibold whitespace-nowrap hidden md:inline-block text-sm text-red-500/90'>Beta</p>
+                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white hidden md:inline-block" title={dictionary.navbar.logo_title}>Image Describer </span>
+                        {/* <p className='self-center font-semibold whitespace-nowrap hidden md:inline-block text-sm text-red-500/90'>Beta</p> */}
                     </div>
                 </a>
                 <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse md:gap-2">
@@ -86,12 +87,12 @@ export default function NavbarSticky({ lang, dictionary }: Props) {
 
                     <LanguageSwitcher lang={lang} userAgent='desktop' dictionary={dictionary['navbar']} />
 
-                    <div className="inline-flex">
+                    <div className={`inline-flex ${userId?'min-w-7':'min-w-11'} `}>
                         <SignedOut>
                             {/* <SignInButton /> */}
                             {signUpOrInSwitcher() ?
-                                <Link className='flex flex-row items-center justify-center content-center transition-colors duration-200 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg text-sm p-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href={`/${lang}/sign-up`}>Sign Up</Link>
-                                : <Link className='flex flex-row items-center justify-center content-center transition-colors duration-200 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg text-sm p-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href={`/${lang}/sign-in`}>Sign In</Link>
+                                <Link className='flex flex-row items-center justify-center content-center w-[70px] transition-colors duration-200 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg text-sm p-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href={`/${lang}/sign-up`}>Sign Up</Link>
+                                : <Link className='flex flex-row items-center justify-center content-center w-[70px] transition-colors duration-200 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg text-sm p-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href={`/${lang}/sign-in`}>Sign In</Link>
                             }
                         </SignedOut>
                         <SignedIn>
@@ -177,7 +178,7 @@ function LanguageSwitcher({ lang, userAgent, dictionary }: { lang: Locale, userA
         return (
             <div className="hidden md:block relative items-center justify-between ">
                 <button type="button" onClick={() => setShowLanguageSwitcher(showLanguageSwitcher === 'hidden' ? 'show' : 'hidden')} className="flex w-full items-center font-medium justify-center px-2 py-3 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
-                    <img src={`/assets/language/${lang}.svg`} className='h-3.5 w-3.5 rounded-full me-2' />
+                    <img src={`/assets/language/${lang}.svg`} className='h-3.5 w-3.5 rounded-full me-2' alt={languagesKV[lang]}/>
                     {languagesKV[lang]}
                 </button>
                 <div className={`${showLanguageSwitcher} absolute min-w-[120px] z-50 my-4 text-base list-none bg-white dark:bg-gray-700 divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"`}>
@@ -187,7 +188,7 @@ function LanguageSwitcher({ lang, userAgent, dictionary }: { lang: Locale, userA
                                 <li key={index}>
                                     <a href={redirectedPathName(lg.locale)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
                                         <div className="inline-flex items-center">
-                                            <img className='h-3.5 w-3.5 rounded-full me-2' src={`/assets/language/${lg.locale}.svg`} />
+                                            <img className='h-3.5 w-3.5 rounded-full me-2' src={`/assets/language/${lg.locale}.svg`} alt={lg.name}/>
                                             {lg.name}
                                         </div>
                                     </a>
@@ -210,7 +211,7 @@ function LanguageSwitcher({ lang, userAgent, dictionary }: { lang: Locale, userA
 
                 <div className="relative">
                     <button type="button" onClick={() => setShowLanguageSwitcher(showLanguageSwitcher === 'hidden' ? 'show' : 'hidden')} className="flex w-full border px-3 py-2 items-center font-medium justify-center text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white dark:border-gray-700">
-                        <img src={`/assets/language/${lang}.svg`} className='h-3.5 w-3.5 rounded-full me-2' />
+                        <img src={`/assets/language/${lang}.svg`} className='h-3.5 w-3.5 rounded-full me-2' alt={languagesKV[lang]}/>
                         {languagesKV[lang]}
                         <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
@@ -224,7 +225,7 @@ function LanguageSwitcher({ lang, userAgent, dictionary }: { lang: Locale, userA
                                     <li key={index}>
                                         <a href={redirectedPathName(lg.locale)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
                                             <div className="inline-flex items-center">
-                                                <img className='h-3.5 w-3.5 rounded-full me-2' src={`/assets/language/${lg.locale}.svg`} />
+                                                <img className='h-3.5 w-3.5 rounded-full me-2' src={`/assets/language/${lg.locale}.svg`} alt={lg.name}/>
                                                 {lg.name}
                                             </div>
                                         </a>

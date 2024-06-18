@@ -1,32 +1,39 @@
 'use client'
 import Image from 'next/image';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useState, useRef,ClipboardEvent } from 'react';
+import Dialogs, { AlertRef } from "@/components/alerts";
 
 type ImagePickerProps = {
-  onImageSelected?: (selectedImage: string | null) => void;
+  onImageSelected?: (selectedImage: File | null) => void;
+  member: boolean;
 } 
 
-export default function ImagePicker({ onImageSelected }: ImagePickerProps) {
+export default function ImagePicker({ onImageSelected,member }: ImagePickerProps) {
 
-  
+    const alertRef = useRef<AlertRef | null>(null);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [isPickerShow, setIsPickerShow] = useState(false);
 
     //定义一个大小4M
-    const MAX_FILE_SIZE_IN_BYTES = 2 * 1024 * 1024; // 4 MB
+    const MAX_FILE_SIZE_IN_BYTES_2M = 2 * 1024 * 1024; // 2 MB
+    const MAX_FILE_SIZE_IN_BYTES_4M = 4 * 1024 * 1024; // 4 MB
     const FILE_SELECT_ERROR_MESSAGE = 'Failed to load the selected image. Please try again.';
     const SIZE_EXCEEDS_LIMIT_MESSAGE = 'The selected file exceeds the maximum allowed size.';
-
+    const MAX_FILE_SIZE_IN_BYTES = member ? MAX_FILE_SIZE_IN_BYTES_4M : MAX_FILE_SIZE_IN_BYTES_2M;
     
     function handleImageSelect (e: ChangeEvent<HTMLInputElement>){
         if (!e.target.files || e.target.files.length === 0) {
-            alert(FILE_SELECT_ERROR_MESSAGE);
+          setErrorTips(FILE_SELECT_ERROR_MESSAGE);
             return;
         }
 
         const file = e.target.files[0];
+        if (!file.type.startsWith('image/')) { 
+          setErrorTips();
+            return;
+        }
         if (file.size > MAX_FILE_SIZE_IN_BYTES) {
-            alert(SIZE_EXCEEDS_LIMIT_MESSAGE);
+            setErrorTips(SIZE_EXCEEDS_LIMIT_MESSAGE);
             return;
         }
         const reader = new FileReader();
@@ -34,20 +41,54 @@ export default function ImagePicker({ onImageSelected }: ImagePickerProps) {
             setSelectedImage(reader.result as string);
             setIsPickerShow(true);
             if (typeof onImageSelected === 'function') {
-              onImageSelected(selectedImage);
+              onImageSelected(null);
             }
         };
         reader.onerror = function () {
-            alert(FILE_SELECT_ERROR_MESSAGE);
+          setErrorTips(FILE_SELECT_ERROR_MESSAGE);
         };
         reader.readAsDataURL(file);
     };
 
+    
+    function setErrorTips(error: string = "select an image") {
+      
+      alertRef.current?.openModal({ type: 0, title: "Oops!", message: error })
+  }
+
+  function pasteHandeler(e: ClipboardEvent<HTMLInputElement>) {
+    const items = e.clipboardData?.items;
+    if (!items || !items[0])return;
+    const file:File = items[0].getAsFile() as File;
+    if (!file.type.startsWith('image/')) { 
+      setErrorTips();
+      return;
+    }
+    if (file && file.size > MAX_FILE_SIZE_IN_BYTES) {
+      setErrorTips(SIZE_EXCEEDS_LIMIT_MESSAGE);
+      return;
+    }
+ 
+    const reader = new FileReader();
+    reader.onload = () => {
+        setSelectedImage(reader.result as string);
+        setIsPickerShow(true);
+        if (typeof onImageSelected === 'function') {
+          onImageSelected(file);
+        }
+    }
+    reader.onerror = function () {
+      setErrorTips(FILE_SELECT_ERROR_MESSAGE);
+    };
+    reader.readAsDataURL(file);
+  }
+
     return (
         <>
-             <div  className={`${isPickerShow ? 'show' : 'hidden'} px-4 py-4`}>
-             <input id="file" name="file" accept="image/png, image/jpeg" type="file"
-                        className="sr-only" onChange={handleImageSelect} />
+            <Dialogs ref={alertRef} />
+             <div  className={`${isPickerShow ? 'show' : 'hidden'} px-4 py-4`} onPaste={pasteHandeler} >
+                  <input id="file" name="file" accept="image/png, image/jpeg" type="file"
+                        className="sr-only" onChange={handleImageSelect}/>
                   <div id="image-container">
                     <label htmlFor="file" className="cursor-pointer rounded-md">
                       {selectedImage && <img id="image" src={selectedImage} alt="Selected Image"
@@ -55,7 +96,7 @@ export default function ImagePicker({ onImageSelected }: ImagePickerProps) {
                     </label>
                   </div>
                 </div>
-                <div  className={`${!isPickerShow ? 'show' : 'hidden'} px-6 py-10`}>
+                <div  className={`${!isPickerShow ? 'show' : 'hidden'} px-6 py-10`} onPaste={pasteHandeler}>
                   <svg className="mx-auto h-12 w-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor"
                     aria-hidden="true">
                     <path fill-rule="evenodd"
@@ -67,9 +108,9 @@ export default function ImagePicker({ onImageSelected }: ImagePickerProps) {
                       className="relative cursor-pointer rounded-md bg-white dark:bg-gray-900 font-semibold text-indigo-600 dark:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 dark:focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500 dark:hover:text-indigo-400">
                       <span>Click to Upload</span>
                     </label>
-                    <p className="pl-1 dark:text-gray-400">or drag and drop</p>
+                    <p className="pl-1 dark:text-gray-400">or copy and paste</p>
                   </div>
-                  <p className="text-xs leading-5 text-gray-600 dark:text-gray-400">PNG, JPG up to 2MB</p>
+                  <p className="text-xs leading-5 text-gray-600 dark:text-gray-400">PNG, JPG up to {member? '4MB':'2MB'}</p>
                 </div>
         </>
     );
